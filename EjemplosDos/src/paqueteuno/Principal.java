@@ -8,6 +8,8 @@ package paqueteuno;
 import paquetedos.DatoPersonal;
 import paquetetres.DatosUbicacion;
 import paquetedos.DatoTrabajo;
+import paquetecuatro.DatoAcademico;
+import paquetecinco.DatoFinal;
 
 /**
  *
@@ -22,23 +24,28 @@ public class Principal {
         String empresa;
         String direcempresa;
         
+        double [] misNotas;
+        double promedio;
+        
         nombre = DatoPersonal.obtenerNombre();
         apellidoRetornado = DatoPersonal.obtenerApellido();
         ciudad = DatosUbicacion.obtenerCiudad();
-        empresa = DatoTrabajo.obtenerEmpresa();
-        direcempresa = DatoTrabajo.obtenerDireccion();
+        misNotas = DatoAcademico.obtenerNotas(4);
+        promedio = DatoFinal.obtenerPromedio(misNotas) ;
+        //empresa = DatoTrabajo.obtenerEmpresa();
+        //direcempresa = DatoTrabajo.obtenerDireccion();
         
         System.out.printf("Los datos ingresados son:\n"
                 + "Nombre: %s\n"
-                + "Ciuadad: %s\n"
                 + "Apellido: %s\n"
-                + "Empresa: %s\n"
-                + "Dirección: %s\n",
+                + "Ciudad: %s\n"
+                //+ "Notas: %.2f\n"
+                + "Promedio: %.2f\n",
                 nombre,
-                ciudad,
                 apellidoRetornado,
-                empresa,
-                direcempresa);
+                ciudad,
+                //misNotas,
+                promedio);
     }
     
 }

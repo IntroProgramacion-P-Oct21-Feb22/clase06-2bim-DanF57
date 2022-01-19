@@ -5,23 +5,30 @@
  */
 package ejemplos;
 
-import java.security.SecureRandom;
-//import java.security.*;
+// import java.security.SecureRandom;
+import java.security.*;
 
 /**
  *
  * @author reroes
  */
-public class Ejemplo01 {
+public class Ejemplo021 {
     
     public static void main(String[] args) {
         // TODO code application logic here
-        int valorA = obtenerNumero();
-        int valorB = obtenerNumero();
-        int suma = obtnerSuma(valorA, valorB);
-        System.out.printf("La suma de %d + %d es igual a: %d\n", 
-                valorA,
-                valorB,
+        int [] valores = new int [5];
+        
+        for (int i = 0; i<5; i++){
+            valores[i] = obtenerNumero();
+        }
+        int suma = obtenerSuma(valores);
+        
+        System.out.printf("La suma de %d + %d + %d + %d + %d es igual a: %d\n", 
+                valores[0],
+                valores[1],
+                valores[2],
+                valores[3],
+                valores[4],
                 suma);
     }
     
@@ -35,8 +42,12 @@ public class Ejemplo01 {
         return valorAleatorio;
     }
     
-    public static int obtnerSuma(int a, int b){
-        return a + b;
+    public static int obtenerSuma(int sumandos[]){
+        int suma = 0;
+        for (int i = 0; i<5; i++){
+            suma = sumandos[i] + suma;
+        }
+        return suma;
     }
     
 }

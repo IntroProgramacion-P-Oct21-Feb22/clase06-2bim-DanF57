@@ -3,27 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejemplos;
+package paquete04;
 
 import java.security.SecureRandom;
-//import java.security.*;
 
-/**
- *
- * @author reroes
- */
-public class Ejemplo01 {
-    
-    public static void main(String[] args) {
-        // TODO code application logic here
-        int valorA = obtenerNumero();
-        int valorB = obtenerNumero();
-        int suma = obtnerSuma(valorA, valorB);
-        System.out.printf("La suma de %d + %d es igual a: %d\n", 
-                valorA,
-                valorB,
-                suma);
-    }
+
+public class OperadorUno {
     
     public static int obtenerNumero() {
         // objeto generador de números aleatorios
@@ -34,9 +19,4 @@ public class Ejemplo01 {
         int valorAleatorio = numerosAleatorios.nextInt(5);
         return valorAleatorio;
     }
-    
-    public static int obtnerSuma(int a, int b){
-        return a + b;
-    }
-    
 }

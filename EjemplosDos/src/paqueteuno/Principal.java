@@ -7,6 +7,7 @@ package paqueteuno;
 
 import paquetedos.DatoPersonal;
 import paquetetres.DatosUbicacion;
+import paquetedos.DatoTrabajo;
 
 /**
  *
@@ -18,16 +19,26 @@ public class Principal {
         String nombre;
         String ciudad;
         String apellidoRetornado;
+        String empresa;
+        String direcempresa;
         
         nombre = DatoPersonal.obtenerNombre();
         apellidoRetornado = DatoPersonal.obtenerApellido();
         ciudad = DatosUbicacion.obtenerCiudad();
+        empresa = DatoTrabajo.obtenerEmpresa();
+        direcempresa = DatoTrabajo.obtenerDireccion();
         
         System.out.printf("Los datos ingresados son:\n"
                 + "Nombre: %s\n"
-                + "Ciuadad: %s\n",
+                + "Ciuadad: %s\n"
+                + "Apellido: %s\n"
+                + "Empresa: %s\n"
+                + "Dirección: %s\n",
                 nombre,
-                ciudad);
+                ciudad,
+                apellidoRetornado,
+                empresa,
+                direcempresa);
     }
     
 }
